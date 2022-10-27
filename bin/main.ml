@@ -28,6 +28,7 @@ let exact_match a p =
 
 let priority_sort a b =
   match (a, b) with
+  | Symbol _, Symbol _ -> 0
   | _, Symbol _ -> -1
   | Symbol _, _ -> 1
   | _ -> 0
@@ -71,6 +72,8 @@ let intrinsics () =
   let lst = [
     "+", intr2_int (fun x y -> x + y);
     "-", intr2_int (fun x y -> x - y);
+    "*", intr2_int (fun x y -> x * y);
+    "/", intr2_int (fun x y -> x / y);
 
     "=",  intr2_bool (fun x y -> x = y);
     "!=", intr2_bool (fun x y -> x != y);
