@@ -1,0 +1,8 @@
+(library
+ (preprocess (pps ppx_deriving.show))
+ (name north))
+
+(ocamllex lexer)
+
+(menhir
+ (modules parser))
