@@ -26,6 +26,7 @@ def fib ( n ) ((n 1 -) fib) ((n 2 -) fib) + end
 5 fib   # [ 55 ]
 ```
 
+Functional
 ```rb
 def applyn ( x f 0 ) x end
 def applyn ( x f n )
