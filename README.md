@@ -28,7 +28,7 @@ def fib ( n ) ((n 1 -) fib) ((n 2 -) fib) + end
 
 Functional
 ```rb
-def applyn ( x f 0 ) x end
+def applyn ( x f 1 ) x end
 def applyn ( x f n )
     (x f) &f (n 1 -) applyn
 end
@@ -38,5 +38,5 @@ def double ( x ) x 2 * end
 # apply double five times to '2'
 2 &double 5 applyn
 
-# [ 64 ]
+# [ 32 ]
 ```
